@@ -1,6 +1,6 @@
 ---
 name: codebase-tour
-description: Use when someone asks to understand an unfamiliar part of a codebase end-to-end — a flow, feature, service, module, or subsystem — including how its functions, components, and services interact, or asks where a change to it would be made.
+description: Use when someone asks to understand an unfamiliar flow, feature, service, module, or subsystem in a codebase end-to-end, including how its functions, components, and services interact, or asks where a change to it would be made.
 license: MIT
 ---
 
