@@ -1,9 +1,9 @@
-# Onboarding to a Codebase
+# Codebase Tour
 
 A skill that walks you through an unfamiliar part of a codebase — one real execution path, hop by hop, with evidence — instead of handing you a file dump.
 
 ```bash
-npx skills add 9jaswag/onboarding-to-a-codebase
+npx skills add 9jaswag/codebase-tour
 ```
 
 Then ask your agent something like:
@@ -39,18 +39,18 @@ Ask to understand an unfamiliar flow, feature, service, module, or subsystem end
 
 ```bash
 # Project
-npx skills add 9jaswag/onboarding-to-a-codebase
+npx skills add 9jaswag/codebase-tour
 
 # Global
-npx skills add 9jaswag/onboarding-to-a-codebase -g
+npx skills add 9jaswag/codebase-tour -g
 
 # One agent
-npx skills add 9jaswag/onboarding-to-a-codebase -a claude-code
+npx skills add 9jaswag/codebase-tour -a claude-code
 ```
 
 Requires an agent with skills support — OpenCode, Claude Code, Codex, Cursor, and others — and Node.js 22.20 or later for the CLI.
 
-Like any skill, it only runs if your agent loads it. If your agent supports explicit invocation, name it: `onboarding-to-a-codebase`.
+Like any skill, it only runs if your agent loads it. If your agent supports explicit invocation, name it: `codebase-tour`.
 
 ## License
 
