@@ -2,9 +2,9 @@
 
 You're new to a repo, or you've just been dropped into a service you've never touched. You ask your agent how it works and get a folder-by-folder summary that tells you what exists, not what happens.
 
-Codebase Tour follows one real path through the part you care about: from the button, request, or job that starts it to the data it writes or the response it returns. It names each function and service on the way, cites the file and line, and pauses after each layer so you can ask questions.
+Codebase Tour follows one real path through the part you care about: from the button, request, or job that starts it to the data it writes or the response it returns. It names each function and service on the way, cites the file and line, and can pause at useful checkpoints so you can steer the explanation.
 
-By the end you can explain the flow to a teammate and point at where a change would land. It's not an architecture review, a debugger, or a documentation generator.
+By the end you can explain the flow to a teammate and, when useful, point at where a change would land. It's not an architecture review, a debugger, or a documentation generator.
 
 ## Install
 
@@ -40,15 +40,15 @@ The skill only runs if your agent loads it. If your agent supports explicit invo
 
 ## How it works
 
-The skill turns "explain this to me" into a short guided session, not one large answer.
+For open-ended questions, it runs a short guided session; if you ask for a concise answer, it gives one.
 
-1. **Scope.** It settles what the section includes, which path matters, and how much you already know.
+1. **Scope.** It identifies the relevant section and path, clarifying ambiguity only when it changes what to trace.
 2. **Entry.** It finds where that path starts: a route, handler, command, queue consumer, or UI action.
 3. **Path.** It follows the call chain, naming what each function or service does and citing the file and line.
 4. **Branches.** It covers the conditions that change the outcome: permissions, flags, async work, retries, failures.
-5. **Change map and playback.** It shows where realistic changes would go, then asks you to retell the flow and place a change. It corrects what you miss.
+5. **Change map.** When you ask where a change goes, it maps that location. For broader explanations, it may include likely change points when useful.
 
-It pauses after each stage so you can ask questions. The session ends only when you can explain the flow and point at where a change would land. If you want a record, it can save the session as `docs/onboarding/<section>.md`.
+For an open-ended tour, it covers one stage per response and pauses at useful checkpoints. It can combine stages or skip ahead when you ask for a concise answer or already know a layer. Each tour ends with a short recap; an optional check-back is offered once. Documentation is created only when you ask for it, using the repository's existing conventions.
 
 ## When it fits
 
